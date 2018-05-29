@@ -60,7 +60,7 @@ float affineFlags = WARP_INVERSE_MAP|INTER_LINEAR;
     Mat testResponse1;
    Mat matTestingNumbers;
 char str;
-Ptr<SVM>  svm1;
+Ptr<SVM>  svm1 = Algorithm::load<SVM>("/jevois/modules/Tutorial/HelloJeVois/4.xml");
 Ptr<SVM>  svm;
 
    
@@ -189,7 +189,7 @@ HOGDescriptor hog(
         }
     }
  
-  Ptr<SVM>  svm1 = Algorithm::load<SVM>("/jevois/modules/Tutorial/HelloJeVois/4.xml");
+  //Ptr<SVM>  svm1 = Algorithm::load<SVM>("/jevois/modules/Tutorial/HelloJeVois/4.xml");
 
   svm1->predict(testMat1, testResponse1);
 
